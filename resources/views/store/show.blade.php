@@ -1,23 +1,39 @@
 @extends('store.template')
 
 @section('content')
-    <h1>Detalle del Producto</h1>
-
-    <div class="product-block">
-        <img src="{{ asset($product->image) }}" width="300">
+<div class="container text-center">
+    <div class="page-header">
+        <h1><i class="fa fa-shopping-cart"></i>Detalle del producto</h1>
     </div>
 
-     <div class="product-block">
-        <h3>{{ $product->name }}</h3><hr>
-        <div class="product-info">
-            <p>{{ $product->description }}</p>
-            <p>Precio: ${{ number_format($product->price,2) }}</p>
-            <p>
-                <a href="#">La quiero</a>
-            </p>        
-        </div>        
-     </div>
-
-     <p><a href="{{ route('home') }}">Regresar</a></p>
-
+    <div class="row">
+        <div class="col-md-6">
+            <div class="product-block">
+                <img src="{{ asset($product->image) }}">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="product-block">
+                <h3>{{ $product->name }}</h3><hr>
+                <div class="product-info panel">
+                    <p>{{ $product->description }}</p>
+                    <h3><span class="label label-success">Precio: ${{ number_format($product->
+                        price,2) }}</span>
+                    </h3>
+                    <p>
+                        <a class="btn btn-warning btn-block" href="#">
+                        La quiero<i class="fa fa-cart-plus fa-2x"></i>
+                        </a>
+                    </p>        
+                </div>        
+            </div>            
+        </div>
+    </div><hr>  
+    
+    <p>
+        <a class="btn btn-primary" href="{{ route('home') }}">
+            <i class="fa fa-chevron-circle-left">Regresar</i>
+        </a>
+    </p>
+</div>
 @stop

@@ -98,10 +98,18 @@ transition: all 0.3s ease-in-out;
     margin-bottom: 0;
 }
 
-.slider img
+/* Carrito ----------*/
+.table-cart
 {
-    width: 1130px;
-    height: 500px;
+    background: #fff;
+    border-radius: 1em;
+    margin-bottom: 30px;
+    padding: 1em;
+}
+
+.table-cart img
+{
+    width: 50px;
 }
 
 

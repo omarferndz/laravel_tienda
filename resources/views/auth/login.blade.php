@@ -8,6 +8,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="page">
+                    
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         @csrf
 

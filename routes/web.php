@@ -51,5 +51,11 @@ Route::get('cart/update/{product}/{quantity}', [
     'uses' => 'CartController@update'
 ]);
 
+Route::get('order-detail', [
+    'middleware' => 'auth:user',
+    'as' => 'order-detail',
+    'uses' => 'CartController@orderDetail'
+]);
 
-
+// Authentication routes...
+Auth::routes();

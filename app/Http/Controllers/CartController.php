@@ -73,6 +73,10 @@ class CartController extends Controller
     // Detalle del pedido
     public function orderDetail()
     {
-        //Codigo aqui
+        if(count(\Session::get('cart')) <= 0) return('home');
+        $cart = \Session::get('cart');
+        $total = $this->total();
+
+        return view('store.order-detail', compact('cart', 'total'));
     }
 }

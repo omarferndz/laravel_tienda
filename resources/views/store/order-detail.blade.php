@@ -51,7 +51,7 @@
 					<a href="{{ route('cart-show') }}" class="btn btn-primary">
 						<i class="fa fa-chevron-circle-left"></i> Regresar
 					</a>
-					<a href="#" class="btn btn-warning">
+					<a href="{{ route('payment') }}" class="btn btn-warning">
 						Pagar con <i class="fa fa-paypal fa-2x"></i>
 					</a>
 				</p>

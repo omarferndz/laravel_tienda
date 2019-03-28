@@ -80,8 +80,6 @@
 					Continuar 
 					<i class="fa fa-chevron-circle-right"></i>
 				</a>
-
-
 			</p>			
 		</div>			
 	</div>

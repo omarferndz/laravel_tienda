@@ -14,6 +14,11 @@ Route::bind('product', function($slug){
 	return App\Product::where('slug', $slug)->first();
 });
 
+// Category dependency injection
+Route::bind('category', function($category){
+    return App\Category::find($category);
+});
+
 Route::get('/',[
     'as' => 'home',
     'uses' => 'StoreController@index'
@@ -68,6 +73,16 @@ Route::get('payment/status', array(
     'as' => 'payment.status',
     'uses' => 'PaypalController@getPaymentStatus',
 ));
+
+// Admin
+Route::get('admin/home', function(){
+    return view('admin.home');
+});
+
+Route::name('admin.')->group(function(){
+    Route::resource('admin/category', 'Admin\CategoryController');    
+});
+
 
 // Authentication routes...
 Auth::routes();

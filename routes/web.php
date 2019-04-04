@@ -80,9 +80,12 @@ Route::get('admin/home', function(){
 });
 
 Route::name('admin.')->group(function(){
-    Route::resource('admin/category', 'Admin\CategoryController');    
+    Route::resource('admin/category', 'Admin\CategoryController');
 });
 
+Route::name('admin.')->group(function(){
+    Route::resource('admin/product', 'Admin\ProductController');
+});
 
 // Authentication routes...
 Auth::routes();

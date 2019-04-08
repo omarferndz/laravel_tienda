@@ -19,6 +19,11 @@ Route::bind('category', function($category){
     return App\Category::find($category);
 });
 
+// User dependency injection
+Route::bind('user', function($user){
+    return App\User::find($user);
+});
+
 Route::get('/',[
     'as' => 'home',
     'uses' => 'StoreController@index'
@@ -85,6 +90,10 @@ Route::name('admin.')->group(function(){
 
 Route::name('admin.')->group(function(){
     Route::resource('admin/product', 'Admin\ProductController');
+});
+
+Route::name('admin.')->group(function(){
+    Route::resource('admin/user', 'Admin\UserController');
 });
 
 // Authentication routes...

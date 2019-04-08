@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>      
-      <a class="navbar-brand main-title" href="#">FPod</a>
+      <a class="navbar-brand main-title" href="{{ route('home') }}">>_FoDP</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

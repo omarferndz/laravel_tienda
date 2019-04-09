@@ -15,4 +15,10 @@ class Product extends Model
     {
     	return $this->belongsTo('App\Category');
     }
+
+    // Relation with OrderItem
+    public function order_item()
+    {
+        return $this->hasOne('App\OrderItem');
+    }
 }

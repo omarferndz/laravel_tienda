@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>      
-      <a class="navbar-brand main-title" href="{{ route('home') }}">>_FoDP</a>
+      {!! link_to('admin/home', ">_FoDP", $attributes = array('class' => 'navbar-brand main-title')) !!}
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -17,14 +17,7 @@
         <li><a href="#">Productos</a></li>
         <li><a href="#">Pedidos</a></li>
         <li><a href="#">Usuarios</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            <i class="fa fa-user"></i> {{ Auth::user()->user }} <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="{{ route('logout') }}">Finalizar sesión</a></li>
-          </ul>
-        </li>
+        @include('store.partials.menu-user')
       </ul>
     </div>
   </div>

@@ -21,7 +21,7 @@
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-shopping-cart  icon-home"></i>
-                    <a href="#" class="btn btn-warning btn-block btn-home-admin">PRODUCTOS</a>
+                    <a href="{{ route('admin.product.index') }}" class="btn btn-warning btn-block btn-home-admin">PRODUCTOS</a>
                 </div>
             </div>
                     
@@ -32,14 +32,14 @@
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-cc-paypal  icon-home"></i>
-                    <a href="#" class="btn btn-warning btn-block btn-home-admin">PEDIDOS</a>
+                    <a href="{{ route('admin.order.index') }}" class="btn btn-warning btn-block btn-home-admin">PEDIDOS</a>
                 </div>
             </div> 
             
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-users  icon-home"></i>
-                    <a href="#" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
+                    <a href="{{ route('admin.user.index') }}" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
                 </div>
             </div>
                     

@@ -80,21 +80,39 @@ Route::get('payment/status', array(
 ));
 
 // Admin
-Route::get('admin/home', function(){
-    return view('admin.home');
-});
+Route::group(['namespace' => 'Admin', 'middleware' => ['auth'], 'prefix' => 'admin'], function(){
 
-Route::name('admin.')->group(function(){
-    Route::resource('admin/category', 'Admin\CategoryController');
-});
+    Route::get('home', function(){
+        return view('admin.home');
+    });
 
-Route::name('admin.')->group(function(){
-    Route::resource('admin/product', 'Admin\ProductController');
-});
+    Route::name('admin.')->group(function(){
+        Route::resource('category', 'CategoryController');
+    });
 
-Route::name('admin.')->group(function(){
-    Route::resource('admin/user', 'Admin\UserController');
-});
+    Route::name('admin.')->group(function(){
+        Route::resource('product', 'ProductController');
+    });
 
+    Route::name('admin.')->group(function(){
+        Route::resource('user', 'UserController');
+    });
+
+    Route::get('orders', [
+        'as'    => 'admin.order.index',
+        'uses'  => 'OrderController@index'
+    ]);
+
+    Route::post('order/get-items', [
+        'as'    => 'admin.order.getItems',
+        'uses'  => 'OrderController@getItems'
+    ]);
+
+    Route::get('order/{id}', [
+        'as' => 'admin.order.destroy',
+        'uses' => 'Admin\OrderController@destroy'
+    ]);
+
+});
 // Authentication routes...
 Auth::routes();

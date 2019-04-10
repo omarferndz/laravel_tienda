@@ -1,7 +1,7 @@
 <footer class="container-fluid">
     <div class="row">
         <div class="col-md-4">
-            <h3>My Laravel Store</h3>
+            <h3>>_EasyCommerce</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Aperiam est mollitia ipsa doloremque vitae dicta
             perferendis architecto, quos recusandae minus eos amet
@@ -10,8 +10,8 @@
         <div class="col-md-4">
             <h3>Desarrollado por:</h3>
             <div class="author-info">
-                <img src="{{ asset('image/avatar/avatar.jpeg') }}" alt="" class="avatar">
-                <p><a href="#">@odfp</a> Lorem ipsum dolor sit amet
+                <img src="{{ asset('image/avatar/47586440_279210882769465_6689937499445264384_n.jpg') }}" alt="" class="avatar">                
+                <p><a href="https://github.com/omarferndz">@omarferndz</a> Lorem ipsum dolor sit amet
                  consectetur, adipisicing elit. Aspernatur ducimus, 
                  dolorum perferendis velit quam amet reprehenderit 
                  ipsam molestiae earum officiis magnam fugiat maxime 
@@ -38,7 +38,7 @@
                 </li>
             </ul>
             <h3>Escribenos:</h3>
-            <i class="fa fa-at"></i><a href="#">o.d.f.p@hotmail.com</a>
+            <i class="fa fa-envelope"></i><a href="#"> gerencia@vintec.com.ve</a>
         </div>
     </div>
 </footer>

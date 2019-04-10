@@ -7,16 +7,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>      
-      {!! link_to('admin/home', ">_FoDP", $attributes = array('class' => 'navbar-brand main-title')) !!}
+      {!! link_to('/', ">_EasyCommerce", $attributes = array('class' => 'navbar-brand main-title')) !!}
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <p class="navbar-text"><i class="fa fa-dashboard"></i> Dashboard</p>
+      <a href="{{ url('admin/home') }}" class="navbar-text"><i class="fa fa-dashboard"></i> Dashboard</a>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Categorias</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Pedidos</a></li>
-        <li><a href="#">Usuarios</a></li>
+        <li><a href="{{ route('admin.category.index') }}">Categorias</a></li>
+        <li><a href="{{ route('admin.product.index') }}">Productos</a></li>
+        <li><a href="{{ route('admin.order.index') }}">Pedidos</a></li>
+        <li><a href="{{ route('admin.user.index') }}">Usuarios</a></li>
         @include('store.partials.menu-user')
       </ul>
     </div>

@@ -1,6 +1,6 @@
 body
 {
-    background: orange;
+    background: #90caf9;
     font-family: 'Poiret One', cursive;       
 }
 h1,h2,h3,h4,h5,h6
@@ -11,14 +11,14 @@ h1,h2,h3,h4,h5,h6
 /*Nav ----------*/
 .main-title
 {
-    color: orange !important;
+    color: blue !important;
     font-size: 26px;
 }
 
 /*Footer -------*/
 footer
 {
-    background: #222;
+    background: white;
     text-align: center;
 }
 
@@ -34,12 +34,12 @@ ul.redes li
 
 ul.redes li a
 {
-    color: orange;
+    color: #1976d2;
 }
 
 .avatar
 {
-    border: 5px solid orange;
+    border: 5px solid #64b5f6;
     border-radius: 50%;
     float: left;
     height: 100px;
@@ -118,6 +118,10 @@ transition: all 0.3s ease-in-out;
     border-radius: 1em;
     margin-bottom: 30px;
     padding: 1em;
+}
+
+.alert {
+    margin-bottom: 0px;
 }
 
 
